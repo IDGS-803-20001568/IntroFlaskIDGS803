@@ -1,6 +1,15 @@
+{% extends 'layout.html' %}
 
-{%extends 'layout.html'%}
+{% block content %}
+    {% import "_macros.html" as macros %}
+    <h1>Alumnos</h1>
+    <form action="" method="post">
 
-{%block content%}
-    <h1>Alumnos</h1>        
-{%endblock%}
+    {{ macros.render_field(form.nombre,class="form-controls") }}
+    {{ macros.render_field(form.apaterno) }}
+    {{ macros.render_field(form.amaterno) }}
+    {{ macros.render_field(form.edad) }}
+    {{ macros.render_field(form.correo) }}
+    <input type="submit" name="btn1" value="regristrar">
+</form>
+{% endblock %}
